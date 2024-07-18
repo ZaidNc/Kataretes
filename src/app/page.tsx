@@ -44,17 +44,6 @@ export default function Page() {
                   con nuestros exclusivos aretes!
                 </p>
               </div>
-              <div className="col-span-2 md:col-span-2 flex justify-end">
-                <a
-                  href="https://wa.me/c/573115433673"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-300 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
-                >
-                  <RocketIcon className="h-5 w-5" />
-                  Contáctanos
-                </a>
-              </div>
             </div>
             <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8">
               {Array.from({ length: 10 }).map((_, index) => (
@@ -74,6 +63,17 @@ export default function Page() {
                   </div>
                 </div>
               ))}
+              <div className="col-span-2 md:col-span-5 flex justify-center mt-8">
+                <a
+                  href="https://wa.me/c/573115433673"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center h-10 w-full rounded-md border-2 border-green-300 text-green-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
+                >
+                  <RocketIcon className="h-5 w-5 mr-2" />
+                  Contáctanos
+                </a>
+              </div>
             </div>
           </div>
         </section>
