@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CheckIcon, RocketIcon, StarIcon } from "@radix-ui/react-icons";
+import { CheckIcon, RocketIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
   return (
@@ -11,9 +11,16 @@ export default function Page() {
             <span className="text-2xl font-bold">Kataretes</span>
           </div>
           <nav className="hidden space-x-4 md:flex">
-            <a className="text-sm font-medium hover:underline">Inicio</a>
-            <a className="text-sm font-medium hover:underline">Productos</a>
-            <a className="text-sm font-medium hover:underline">
+            <a href="#inicio" className="text-sm font-medium hover:underline">
+              Inicio
+            </a>
+            <a
+              href="#productos"
+              className="text-sm font-medium hover:underline"
+            >
+              Productos
+            </a>
+            <a href="#tienda" className="text-sm font-medium hover:underline">
               Nuestra Tienda
             </a>
           </nav>
@@ -29,7 +36,7 @@ export default function Page() {
         </div>
       </header>
       <main>
-        <section className="py-12 md:py-24">
+        <section id="inicio" className="py-12 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8">
               <div className="col-span-2 md:col-span-3">
@@ -45,7 +52,10 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8">
+            <div
+              id="productos"
+              className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8"
+            >
               {Array.from({ length: 10 }).map((_, index) => (
                 <div
                   key={index}
@@ -79,7 +89,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="bg-muted py-12 md:py-24">
+        <section id="tienda" className="bg-muted py-12 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
               <div>
