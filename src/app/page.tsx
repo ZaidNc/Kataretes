@@ -17,7 +17,7 @@ export default function Page() {
             <a className="text-sm font-medium hover:underline">Contact</a>
           </nav>
           <a
-            href="https://wa.me/123456789"
+            href="https://wa.me/c/573115433673"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-500 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
@@ -42,7 +42,7 @@ export default function Page() {
               </div>
               <div className="col-span-2 md:col-span-2 flex justify-end">
                 <a
-                  href="https://wa.me/123456789"
+                  href="https://wa.me/c/573115433673"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-500 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
