@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Button } from "@/app/components/ui/button";
 import { CheckIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
@@ -17,16 +16,15 @@ export default function Page() {
             <a className="text-sm font-medium hover:underline">About</a>
             <a className="text-sm font-medium hover:underline">Contact</a>
           </nav>
-          <Button
-            as="a"
+          <a
             href="https://wa.me/123456789"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex"
+            className="hidden md:inline-flex items-center gap-2"
           >
             <CheckIcon className="h-5 w-5 mr-2" />
             Contact Us
-          </Button>
+          </a>
         </div>
       </header>
       <main>
@@ -43,8 +41,7 @@ export default function Page() {
                 </p>
               </div>
               <div className="col-span-2 md:col-span-2 flex justify-end">
-                <Button
-                  as="a"
+                <a
                   href="https://wa.me/123456789"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -52,7 +49,7 @@ export default function Page() {
                 >
                   <CheckIcon className="h-5 w-5" />
                   Contact Us
-                </Button>
+                </a>
               </div>
             </div>
             <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8">
