@@ -7,8 +7,8 @@ export default function Page() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <StarIcon className="h-6 w-6" />
-            <span className="font-bold">Kataretes</span>
+            <img src="/logo.png" alt="Kataretes Logo" className="h-8 w-auto" />
+            <span className="text-2xl font-bold">Kataretes</span>
           </div>
           <nav className="hidden space-x-4 md:flex">
             <a className="text-sm font-medium hover:underline">Inicio</a>
@@ -23,7 +23,7 @@ export default function Page() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-300 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
           >
-            <RocketIcon className="h-5 w-5 mr-2" />
+            <RocketIcon className="h-5 w-5" />
             Contáctanos
           </a>
         </div>
@@ -36,7 +36,7 @@ export default function Page() {
                 <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
                   Descubre Nuestra Colección Exclusiva de Aretes Artesanales
                 </h1>
-                <p className="mt-4 text-muted-foreground md:text-lg">
+                <p className="mt-4 text-muted-foreground md:text-lg leading-relaxed">
                   Explora nuestra selección de aretes hechos a mano con
                   mostacilla, combinando estilo y autenticidad. Cada pieza es
                   cuidadosamente elaborada, asegurando un diseño único y de alta
@@ -49,7 +49,7 @@ export default function Page() {
               {Array.from({ length: 10 }).map((_, index) => (
                 <div
                   key={index}
-                  className="rounded-lg bg-muted shadow-sm transition-all hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
+                  className="rounded-lg bg-muted shadow-sm transition-transform transform hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
                 >
                   <img
                     src="/OIP.jpg"
@@ -72,7 +72,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center h-10 w-full rounded-md border-2 border-green-300 text-green-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
                 >
-                  <RocketIcon className="h-5 w-5 mr-2" />
+                  <RocketIcon className="h-5 w-5" />
                   Contáctanos
                 </a>
               </div>
@@ -86,11 +86,11 @@ export default function Page() {
                 <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
                   Acerca de Nuestra Tienda
                 </h2>
-                <p className="mt-4 text-muted-foreground md:text-lg">
+                <p className="mt-4 text-muted-foreground md:text-lg leading-relaxed">
                   Kataretes se dedica a ofrecer una colección de aretes de
                   mostacilla artesanales de la más alta calidad. Cada par de
-                  aretes está meticulosamente, asegurando piezas únicas que
-                  reflejan nuestra pasión por el detalle y el diseño.
+                  aretes está meticulosamente elaborado, asegurando piezas
+                  únicas que reflejan nuestra pasión por el detalle y el diseño.
                 </p>
               </div>
               <div>
@@ -122,10 +122,10 @@ export default function Page() {
       </main>
       <footer className="bg-muted py-6 text-sm text-muted-foreground">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:gap-0">
-          <p>&copy; 2024 Kataretes. All rights reserved.</p>
+          <p>&copy; 2024 Kataretes. Todos los derechos reservados.</p>
           <nav className="flex space-x-4">
-            <a className="hover:underline">Privacy Policy</a>
-            <a className="hover:underline">Terms of Service</a>
+            <a className="hover:underline">Política de Privacidad</a>
+            <a className="hover:underline">Términos de Servicio</a>
           </nav>
         </div>
       </footer>
