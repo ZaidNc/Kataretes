@@ -49,17 +49,19 @@ export default function Page() {
               {Array.from({ length: 10 }).map((_, index) => (
                 <div
                   key={index}
-                  className="rounded-lg bg-muted p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md"
+                  className="rounded-lg bg-muted shadow-sm transition-all hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
                 >
                   <img
                     src="/OIP.jpg"
                     alt={`Product ${index + 1}`}
                     width={300}
                     height={300}
-                    className="rounded-lg object-cover"
+                    className="object-cover h-48 md:h-64"
                   />
-                  <div className="mt-4">
-                    <h3 className="text-lg font-medium">Product {index + 1}</h3>
+                  <div className="p-4">
+                    <h3 className="text-lg font-medium text-center">
+                      Producto {index + 1}
+                    </h3>
                   </div>
                 </div>
               ))}
