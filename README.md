@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kataretes
 
-## Getting Started
+Kataretes es una plataforma en línea dedicada a ofrecer una colección exclusiva de aretes artesanales elaborados con mostacilla. Nuestro sitio web permite a los usuarios explorar, seleccionar y comprar aretes únicos, además de conocer más sobre nuestra tienda y contactarnos directamente.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Explora Nuestra Colección**: Navega por una variedad de aretes artesanales hechos a mano, cada uno con un diseño único y de alta calidad.
+- **Interfaz Amigable**: Disfruta de una experiencia de usuario fluida con una interfaz moderna y responsiva.
+- **Contacto Directo**: Comunícate fácilmente con nosotros a través de WhatsApp para consultas o soporte.
+- **Información de la Tienda**: Conoce más sobre nuestra tienda, nuestros productos y por qué somos la elección ideal para tus aretes de mostacilla.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Framework de React para el desarrollo del frontend.
+- **Tailwind CSS**: Framework de CSS para estilos modernos y personalizados.
+- **Radix UI**: Componentes accesibles para una mejor experiencia de usuario.
+- **Lucide Icons**: Conjunto de íconos para una interfaz visual atractiva.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Contribuciones
 
-To learn more about Next.js, take a look at the following resources:
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tu funcionalidad o corrección.
+3. Realiza tus cambios y asegúrate de que el código esté bien probado.
+4. Envía un pull request con una descripción clara de los cambios realizados.
