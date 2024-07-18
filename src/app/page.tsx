@@ -20,7 +20,7 @@ export default function Page() {
             href="https://wa.me/123456789"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2"
+            className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-500 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
           >
             <CheckIcon className="h-5 w-5 mr-2" />
             Contact Us
@@ -45,7 +45,7 @@ export default function Page() {
                   href="https://wa.me/123456789"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-500 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
                 >
                   <CheckIcon className="h-5 w-5" />
                   Contact Us
