@@ -7,7 +7,7 @@ export default function Page() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Kataretes Logo" className="h-8 w-auto" />
+            <img src="/kataaretesm.jpg" alt="Kataretes Logo" className="h-8 w-auto" />
             <span className="text-2xl font-bold">Kataretes</span>
           </div>
           <nav className="hidden space-x-4 md:flex">
