@@ -1,13 +1,80 @@
 import * as React from "react";
 import { CheckIcon, RocketIcon } from "@radix-ui/react-icons";
 
+const productos = [
+  {
+    id: 1,
+    nombre: "Aretes Coloridos",
+    imagen: "/1.jpg",
+    descripcion: "Aretes artesanales coloridos.",
+  },
+  {
+    id: 2,
+    nombre: "Aretes Elegantes",
+    imagen: "/2.jpg",
+    descripcion: "Aretes elegantes para ocasiones especiales.",
+  },
+  {
+    id: 3,
+    nombre: "Aretes Modernos",
+    imagen: "/3.jpg",
+    descripcion: "Diseños modernos y únicos.",
+  },
+  {
+    id: 4,
+    nombre: "Aretes Coloridos",
+    imagen: "/4.jpg",
+    descripcion: "Aretes artesanales coloridos.",
+  },
+  {
+    id: 5,
+    nombre: "Aretes Elegantes",
+    imagen: "/5.jpg",
+    descripcion: "Aretes elegantes para ocasiones especiales.",
+  },
+  {
+    id: 6,
+    nombre: "Aretes Modernos",
+    imagen: "/6.jpg",
+    descripcion: "Diseños modernos y únicos.",
+  },
+  {
+    id: 7,
+    nombre: "Aretes Coloridos",
+    imagen: "/7.jpg",
+    descripcion: "Aretes artesanales.",
+  },
+  {
+    id: 8,
+    nombre: "Collar de Perro",
+    imagen: "/8.jpg",
+    descripcion: "Aretes elegantes para ocasiones especiales.",
+  },
+  {
+    id: 9,
+    nombre: "Arete con diseño de Goku",
+    imagen: "/9.jpg",
+    descripcion: "Diseños modernos y únicos.",
+  },
+  {
+    id: 10,
+    nombre: "Collar de Gato",
+    imagen: "/10.jpg",
+    descripcion: "Diseños modernos y únicos.",
+  },
+];
+
 export default function Page() {
   return (
     <div className="bg-background text-foreground">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <img src="/kataaretesm.jpg" alt="Kataretes Logo" className="h-8 w-auto" />
+            <img
+              src="/kataaretesm.jpg"
+              alt="Kataretes Logo"
+              className="h-8 w-auto"
+            />
             <span className="text-2xl font-bold">Kataretes</span>
           </div>
           <nav className="hidden space-x-4 md:flex">
@@ -56,22 +123,23 @@ export default function Page() {
               id="productos"
               className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8"
             >
-              {Array.from({ length: 10 }).map((_, index) => (
+              {productos.map((producto) => (
                 <div
-                  key={index}
+                  key={producto.id}
                   className="rounded-lg bg-muted shadow-sm transition-transform transform hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
                 >
                   <img
-                    src="/OIP.jpg"
-                    alt={`Product ${index + 1}`}
+                    src={producto.imagen}
+                    alt={producto.nombre}
                     width={300}
                     height={300}
                     className="object-cover h-48 md:h-64"
                   />
                   <div className="p-4">
                     <h3 className="text-lg font-medium text-center">
-                      Producto {index + 1}
+                      {producto.nombre}
                     </h3>
+                    <p className="mt-2 text-center">{producto.descripcion}</p>
                   </div>
                 </div>
               ))}
