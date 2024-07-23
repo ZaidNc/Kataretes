@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CheckIcon, RocketIcon } from "@radix-ui/react-icons";
+import { CheckIcon } from "@radix-ui/react-icons";
 import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
 
 const productos = [
