@@ -1,66 +1,71 @@
 import * as React from "react";
 import { CheckIcon, RocketIcon } from "@radix-ui/react-icons";
+import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
 
 const productos = [
   {
     id: 1,
-    nombre: "Aretes Coloridos",
+    nombre: "Brillantes y Artesanales",
     imagen: "/1.jpg",
-    descripcion: "Aretes artesanales coloridos.",
+    descripcion:
+      "Añade un toque de alegría con estos vibrantes aretes hechos a mano.",
   },
   {
     id: 2,
-    nombre: "Aretes Elegantes",
+    nombre: "Elegancia en Cada Detalle",
     imagen: "/2.jpg",
-    descripcion: "Aretes elegantes para ocasiones especiales.",
+    descripcion:
+      "Perfectos para ocasiones especiales, estos aretes irradian sofisticación.",
   },
   {
     id: 3,
-    nombre: "Aretes Modernos",
+    nombre: "Estilo Contemporáneo",
     imagen: "/3.jpg",
-    descripcion: "Diseños modernos y únicos.",
+    descripcion: "Diseño único y moderno para quienes buscan destacar.",
   },
   {
     id: 4,
-    nombre: "Aretes Coloridos",
+    nombre: "Colores Vivos y Artesanía",
     imagen: "/4.jpg",
-    descripcion: "Aretes artesanales coloridos.",
+    descripcion:
+      "Estos aretes llenos de vida son el complemento ideal para tu look casual.",
   },
   {
     id: 5,
-    nombre: "Aretes Elegantes",
+    nombre: "Distinción y Elegancia",
     imagen: "/5.jpg",
-    descripcion: "Aretes elegantes para ocasiones especiales.",
+    descripcion:
+      "Aretes elegantes que aportan un toque de glamour a tu atuendo.",
   },
   {
     id: 6,
-    nombre: "Aretes Modernos",
+    nombre: "Diseño Vanguardista",
     imagen: "/6.jpg",
-    descripcion: "Diseños modernos y únicos.",
+    descripcion: "Innovadores aretes modernos, perfectos para un estilo único.",
   },
   {
     id: 7,
-    nombre: "Aretes Coloridos",
+    nombre: "Alegría y Color",
     imagen: "/7.jpg",
-    descripcion: "Aretes artesanales.",
+    descripcion: "Aretes artesanales coloridos que realzan cualquier look.",
   },
   {
     id: 8,
-    nombre: "Collar de Perro",
+    nombre: "Collar de Perro Encantador",
     imagen: "/8.jpg",
-    descripcion: "Aretes elegantes para ocasiones especiales.",
+    descripcion: "Collar artesanal con un adorable diseño de perro.",
   },
   {
     id: 9,
-    nombre: "Arete con diseño de Goku",
+    nombre: "Goku en Estilo",
     imagen: "/9.jpg",
-    descripcion: "Diseños modernos y únicos.",
+    descripcion: "Manilla con un diseño único de Goku para los fanáticos.",
   },
   {
     id: 10,
     nombre: "Collar de Gato",
     imagen: "/10.jpg",
-    descripcion: "Diseños modernos y únicos.",
+    descripcion: "Collar artesanal con un encantador diseño de gato.",
   },
 ];
 
@@ -92,12 +97,12 @@ export default function Page() {
             </a>
           </nav>
           <a
-            href="https://wa.me/c/573115433673"
+            href="https://www.instagram.com/kataretes/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-300 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
           >
-            <RocketIcon className="h-5 w-5" />
+            <IconBrandInstagram className="h-5 w-5" />
             Contáctanos
           </a>
         </div>
@@ -150,7 +155,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center h-10 w-full rounded-md border-2 border-green-300 text-green-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
                 >
-                  <RocketIcon className="h-5 w-5" />
+                  <IconBrandWhatsapp className="h-5 w-5" />
                   Contáctanos
                 </a>
               </div>
@@ -197,14 +202,89 @@ export default function Page() {
             </div>
           </div>
         </section>
+        <section id="testimonios" className="py-12 bg-gray-100">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-semibold text-center">
+              Lo que dicen nuestros clientes
+            </h2>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <p>
+                  "Los aretes son hermosos y de excelente calidad. Me encantan
+                  los colores y el diseño único!"
+                </p>
+                <p className="mt-4 text-right">- Ana G.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <p>
+                  "Compré un par de aretes para regalar y fueron un éxito.
+                  Definitivamente volveré a comprar."
+                </p>
+                <p className="mt-4 text-right">- Luis R.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <p>
+                  "Me encantan mis nuevos aretes. Son perfectos para cualquier
+                  ocasión."
+                </p>
+                <p className="mt-4 text-right">- María P.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="faq" className="py-12">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-semibold text-center">
+              Preguntas Frecuentes
+            </h2>
+            <div className="mt-8 space-y-4">
+              <details className="bg-white p-4 rounded-lg shadow-lg">
+                <summary className="font-semibold">
+                  ¿Cómo puedo hacer un pedido?
+                </summary>
+                <p className="mt-2">
+                  Puedes hacer un pedido a través de nuestro Instagram o
+                  contactándonos directamente a través de WhatsApp.
+                </p>
+              </details>
+              <details className="bg-white p-4 rounded-lg shadow-lg">
+                <summary className="font-semibold">
+                  ¿Cuáles son las opciones de pago?
+                </summary>
+                <p className="mt-2">
+                  Aceptamos pagos a través de tarjeta de crédito, Nequi y
+                  transferencias bancarias.
+                </p>
+              </details>
+              <details className="bg-white p-4 rounded-lg shadow-lg">
+                <summary className="font-semibold">
+                  ¿Ofrecen envíos internacionales?
+                </summary>
+                <p className="mt-2">No, hacemos envíos a Colombia.</p>
+              </details>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="bg-muted py-6 text-sm text-muted-foreground">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:gap-0">
-          <p>&copy; 2024 Kataretes. Todos los derechos reservados.</p>
-          <nav className="flex space-x-4">
-            <a className="hover:underline">Política de Privacidad</a>
-            <a className="hover:underline">Términos de Servicio</a>
-          </nav>
+      <footer className="py-8 bg-muted text-center">
+        <div className="container mx-auto">
+          <p className="text-lg font-semibold">
+            Síguenos en nuestras redes sociales
+          </p>
+          <div className="mt-4 flex justify-center space-x-4">
+            <a
+              href="https://www.instagram.com/kataretes/"
+              className="text-gray-700 hover:text-pink-600"
+            >
+              <IconBrandInstagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://wa.me/c/573115433673"
+              className="text-gray-700 hover:text-green-600"
+            >
+              <IconBrandWhatsapp className="h-6 w-6" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
