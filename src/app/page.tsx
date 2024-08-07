@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
 
@@ -8,65 +9,65 @@ const productos = [
     nombre: "Brillantes y Artesanales",
     imagen: "/1.jpg",
     descripcion:
-      "Añade un toque de alegría con estos vibrantes aretes hechos a mano.",
+      "Añade un toque de alegría con estos vibrantes aretes hechos a mano."
   },
   {
     id: 2,
     nombre: "Elegancia en Cada Detalle",
     imagen: "/2.jpg",
     descripcion:
-      "Perfectos para ocasiones especiales, estos aretes irradian sofisticación.",
+      "Perfectos para ocasiones especiales, estos aretes irradian sofisticación."
   },
   {
     id: 3,
     nombre: "Estilo Contemporáneo",
     imagen: "/3.jpg",
-    descripcion: "Diseño único y moderno para quienes buscan destacar.",
+    descripcion: "Diseño único y moderno para quienes buscan destacar."
   },
   {
     id: 4,
     nombre: "Colores Vivos y Artesanía",
     imagen: "/4.jpg",
     descripcion:
-      "Estos aretes llenos de vida son el complemento ideal para tu look casual.",
+      "Estos aretes llenos de vida son el complemento ideal para tu look casual."
   },
   {
     id: 5,
     nombre: "Distinción y Elegancia",
     imagen: "/5.jpg",
     descripcion:
-      "Aretes elegantes que aportan un toque de glamour a tu atuendo.",
+      "Aretes elegantes que aportan un toque de glamour a tu atuendo."
   },
   {
     id: 6,
     nombre: "Diseño Vanguardista",
     imagen: "/6.jpg",
-    descripcion: "Innovadores aretes modernos, perfectos para un estilo único.",
+    descripcion: "Innovadores aretes modernos, perfectos para un estilo único."
   },
   {
     id: 7,
     nombre: "Alegría y Color",
     imagen: "/7.jpg",
-    descripcion: "Aretes artesanales coloridos que realzan cualquier look.",
+    descripcion: "Aretes artesanales coloridos que realzan cualquier look."
   },
   {
     id: 8,
     nombre: "Collar de Perro Encantador",
     imagen: "/8.jpg",
-    descripcion: "Collar artesanal con un adorable diseño de perro.",
+    descripcion: "Collar artesanal con un adorable diseño de perro."
   },
   {
     id: 9,
     nombre: "Goku en Estilo",
     imagen: "/9.jpg",
-    descripcion: "Manilla con un diseño único de Goku para los fanáticos.",
+    descripcion: "Manilla con un diseño único de Goku para los fanáticos."
   },
   {
     id: 10,
     nombre: "Collar de Gato",
     imagen: "/10.jpg",
-    descripcion: "Collar artesanal con un encantador diseño de gato.",
-  },
+    descripcion: "Collar artesanal con un encantador diseño de gato."
+  }
 ];
 
 export default function Page() {
@@ -75,9 +76,11 @@ export default function Page() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <img
+            <Image
               src="/kataaretesm.jpg"
               alt="Kataretes Logo"
+              width={100}
+              height={50}
               className="h-8 w-auto"
             />
             <span className="text-2xl font-bold">Kataretes</span>
@@ -133,7 +136,7 @@ export default function Page() {
                   key={producto.id}
                   className="rounded-lg bg-muted shadow-sm transition-transform transform hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
                 >
-                  <img
+                  <Image
                     src={producto.imagen}
                     alt={producto.nombre}
                     width={300}
@@ -210,22 +213,22 @@ export default function Page() {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <p>
-                  "Los aretes son hermosos y de excelente calidad. Me encantan
-                  los colores y el diseño único!"
+                  &quot;Los aretes son hermosos y de excelente calidad. Me
+                  encantan los colores y el diseño único!&quot;
                 </p>
                 <p className="mt-4 text-right">- Ana G.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <p>
-                  "Compré un par de aretes para regalar y fueron un éxito.
-                  Definitivamente volveré a comprar."
+                  &quot;Compré un par de aretes para regalar y fueron un éxito.
+                  Definitivamente volveré a comprar.&quot;
                 </p>
                 <p className="mt-4 text-right">- Luis R.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <p>
-                  "Me encantan mis nuevos aretes. Son perfectos para cualquier
-                  ocasión."
+                  &quot;Me encantan mis nuevos aretes. Son perfectos para
+                  cualquier ocasión.&quot;
                 </p>
                 <p className="mt-4 text-right">- María P.</p>
               </div>
