@@ -1,7 +1,12 @@
+"use client";
+import { useState } from "react";
 import * as React from "react";
 import Image from "next/image";
+import Slider from "react-slick";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const productos = [
   {
@@ -70,7 +75,30 @@ const productos = [
   }
 ];
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
+};
+
 export default function Page() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="bg-background text-foreground">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur">
@@ -85,16 +113,63 @@ export default function Page() {
             />
             <span className="text-2xl font-bold">Kataretes</span>
           </div>
-          <nav className="hidden space-x-4 md:flex">
+          <nav className="flex items-center space-x-4">
             <a href="#inicio" className="text-sm font-medium hover:underline">
               Inicio
             </a>
-            <a
-              href="#productos"
-              className="text-sm font-medium hover:underline"
-            >
-              Productos
-            </a>
+            <div className="relative">
+              <button
+                className="text-sm font-medium hover:underline flex items-center gap-1"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                Productos
+                <svg
+                  className={`w-4 h-4 transform transition-transform duration-200 ${
+                    menuOpen ? "rotate-180" : ""
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div
+                className={`absolute mt-2 w-48 bg-white bg-opacity-80 text-black shadow-lg rounded-lg ${
+                  menuOpen ? "block" : "hidden"
+                }`}
+                style={{ top: "100%", left: 0 }}
+              >
+                <a
+                  href="/productos/categorias/Munecos"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Muñecos en crochet
+                </a>
+                <a
+                  href="/productos/categorias/Manillas"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Manillas
+                </a>
+                <a
+                  href="/productos/categorias/Aretes"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Aretes
+                </a>
+                <a
+                  href="/productos/categorias/Llaveros"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Llaveros
+                </a>
+              </div>
+            </div>
             <a href="#tienda" className="text-sm font-medium hover:underline">
               Nuestra Tienda
             </a>
@@ -102,7 +177,7 @@ export default function Page() {
           <a
             href="https://www.instagram.com/kataretes/"
             target="_blank"
-            rel="noopener noreferrer "
+            rel="noopener noreferrer"
             className="flex items-center gap-2 h-10 w-auto rounded-md bg-rose-300 text-gray-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
           >
             <IconBrandInstagram className="h-5 w-5" />
@@ -127,39 +202,36 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div
-              id="productos"
-              className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-5 md:gap-8"
-            >
-              {productos.map((producto) => (
-                <div
-                  key={producto.id}
-                  className="rounded-lg bg-muted shadow-sm transition-transform transform hover:scale-105 hover:shadow-md flex flex-col overflow-hidden"
-                >
-                  <Image
-                    src={producto.imagen}
-                    alt={producto.nombre}
-                    width={300}
-                    height={300}
-                    className="object-cover h-48 md:h-64"
-                  />
-                  <div className="p-4">
-                    <h3 className="text-lg font-medium text-center">
-                      {producto.nombre}
-                    </h3>
-                    <p className="mt-2 text-center">{producto.descripcion}</p>
+            <div id="productos" className="mt-12">
+              <Slider {...settings}>
+                {productos.map((producto) => (
+                  <div key={producto.id} className="p-4">
+                    <div className="rounded-lg bg-muted shadow-sm transition-transform transform hover:scale-105 hover:shadow-md flex flex-col overflow-hidden">
+                      <Image
+                        src={producto.imagen}
+                        alt={producto.nombre}
+                        width={300}
+                        height={300}
+                        className="object-cover h-48 md:h-64"
+                      />
+                      <div className="p-4">
+                        <h3 className="text-lg font-medium text-center">
+                          {producto.nombre}
+                        </h3>
+                        <p className="mt-2 text-center">
+                          {producto.descripcion}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
-              <div className="col-span-2 md:col-span-5 flex justify-center mt-8">
+                ))}
+              </Slider>
+              <div className="flex justify-center mt-8">
                 <a
-                  href="https://wa.me/c/573115433673"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/productos"
                   className="flex items-center justify-center h-10 w-full rounded-md border-2 border-green-300 text-green-700 shadow-md transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2"
                 >
-                  <IconBrandWhatsapp className="h-5 w-5" />
-                  Contáctanos
+                  Ver Todos los Productos
                 </a>
               </div>
             </div>
