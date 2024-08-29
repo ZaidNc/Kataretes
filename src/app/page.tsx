@@ -145,7 +145,7 @@ export default function Page() {
                 style={{ top: "100%", left: 0 }}
               >
                 <a
-                  href="/productos/categorias/Munecos"
+                  href="/productos/categorias/Muñecos"
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Muñecos en crochet
