@@ -2,6 +2,7 @@
 
 Kataretes es una plataforma en línea dedicada a ofrecer una colección exclusiva de aretes artesanales elaborados con mostacilla. Nuestro sitio web permite a los usuarios explorar, seleccionar y comprar aretes únicos, además de conocer más sobre nuestra tienda y contactarnos directamente.
 
+
 ## Características
 
 - **Explora Nuestra Colección**: Navega por una variedad de aretes artesanales hechos a mano, cada uno con un diseño único y de alta calidad.
